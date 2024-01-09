@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Greeting Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Simple Greeting Page</h2>
+    <form>
+        <label for="name">Enter your name:</label>
+        <br>
+        <input type="text" id="name" name="name" placeholder="Your Name">
+        <br>
+        <button type="button" onclick="displayGreeting()">Say Hello</button>
+    </form>
+
+    <div id="greeting"></div>
+
+    <script>
+        function displayGreeting() {
+            var name = document.getElementById('name').value;
+            var greetingDiv = document.getElementById('greeting');
+            greetingDiv.innerHTML = '<p>Hello, ' + name + '!</p>';
+        }
+    </script>
+</body>
+</html>
+
